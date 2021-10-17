@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReciclaFacil">
         <activity
+            android:name=".coleta_revisao"
+            android:exported="true" />
+        <activity
             android:name=".coleta_agendamento"
             android:exported="true" />
         <activity
