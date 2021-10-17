@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Alexandre da Costa/AndroidStudioProjects/ReciclaFacil/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="app/src/main/res/layout/activity_coleta_agendamento.xml" value="0.2210144927536232" />
+        <entry key="app/src/main/res/layout/activity_coleta_endereco.xml" value="0.29364161849710985" />
+        <entry key="app/src/main/res/layout/activity_coleta_tipo.xml" value="0.2210144927536232" />
       </map>
     </option>
   </component>
