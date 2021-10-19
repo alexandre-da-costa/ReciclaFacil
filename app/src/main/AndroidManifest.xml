@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReciclaFacil">
         <activity
+            android:name=".historico_descartes"
+            android:exported="false" />
+        <activity
+            android:name=".resgate_pontos_confirmacao"
+            android:exported="false" />
+        <activity
+            android:name=".resgate_pontos"
+            android:exported="false" />
+        <activity
+            android:name=".menu_principal"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".coleta_revisao"
             android:exported="true" />
         <activity
