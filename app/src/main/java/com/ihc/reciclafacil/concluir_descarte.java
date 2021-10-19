@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class resgate_pontos extends AppCompatActivity {
+public class concluir_descarte extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resgate_pontos);
+        setContentView(R.layout.activity_concluir_descarte);
     }
 
-    public void gotoConfirmarSaque(View view)
+    public void gotoMenu(View view)
     {
-        Intent i = new Intent(this, resgate_pontos_confirmacao.class);
+        Intent i = new Intent(this, menu_principal.class);
         startActivity(i);
     }
 }

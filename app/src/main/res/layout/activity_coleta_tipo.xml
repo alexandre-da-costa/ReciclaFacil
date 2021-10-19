@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".coleta_tipo">
 
 
@@ -51,6 +52,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Papel"
+                android:textColor="#000000"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -72,6 +74,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Plástico"
+                android:textColor="#000000"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -93,6 +96,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Metal"
+                android:textColor="#000000"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -114,6 +118,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Vidro"
+                android:textColor="#000000"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -126,6 +131,7 @@
             android:id="@+id/btnAvancar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="gotoDiaHora"
             android:text="Avançar" />
 
     </LinearLayout>

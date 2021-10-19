@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".resgate_pontos">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +20,7 @@
             android:layout_height="40dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1200"
@@ -27,7 +29,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewLabelPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pontos Acumulados"
@@ -40,7 +42,7 @@
             android:layout_height="20dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewMoneyValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="R$12,00"
@@ -49,7 +51,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewLabelValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Valor em Reais"
@@ -62,44 +64,53 @@
             android:layout_height="40dp" />
 
         <EditText
-            android:id="@+id/txtCEP"
+            android:id="@+id/textViewWithdrawValue"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="R$0,00"
             android:inputType="textPostalAddress"
             android:minHeight="48dp"
+            android:singleLine="false"
             android:textAlignment="center"
-            android:text="R$0,00" />
+            android:textColor="#000000"
+            android:textColorHint="#626262" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewWithDrawLabel"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Valor em Reais a Sacar"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textColor="#626262"
+            android:textColorHint="#626262"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="40dp" />
 
         <EditText
-            android:id="@+id/txtEndereco"
+            android:id="@+id/textViewChavePix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:singleLine="true"
+            android:text="5b394889-ckb9-46f9-n8a3-7d6f988eb7df"
             android:textAlignment="center"
-            android:text="5b394889-ckb9-46f9-n8a3-7d6f988eb7df" />
+            android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewPixLabel"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Chave Pix para Transferência"
+            android:textColor="#626262"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -109,6 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="153dp"
             android:layout_weight="1"
+            android:onClick="gotoConfirmarSaque"
             android:text="Confirmar Saque" />
 
         <Space

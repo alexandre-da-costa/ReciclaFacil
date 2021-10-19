@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".menu_principal">
 
     <LinearLayout
@@ -18,7 +19,7 @@
             android:layout_height="20dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPontos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1200"
@@ -27,7 +28,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewAccPontos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pontos Acumulados"
@@ -43,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="Resgatar" />
+            android:text="Resgatar"
+            android:onClick="gotoResgate"/>
 
         <Space
             android:layout_width="match_parent"
@@ -53,7 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_weight="1"
-            android:text="Pontos de Coleta" />
+            android:text="Pontos de Coleta"
+            android:onClick="gotoPontosColeta"/>
 
         <Space
             android:layout_width="match_parent"
@@ -63,7 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_weight="1"
-            android:text="Coleta a Domicílio" />
+            android:text="Coleta a Domicílio"
+            android:onClick="gotoColetaDomicilio"/>
 
         <Space
             android:layout_width="match_parent"
@@ -73,7 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_weight="1"
-            android:text="Histórico de Descartes" />
+            android:text="Histórico de Descartes"
+            android:onClick="gotoHistorico"/>
 
         <Space
             android:layout_width="match_parent"
@@ -83,12 +88,12 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_weight="1"
-            android:text="Efetuar Descarte" />
+            android:text="Efetuar Descarte"
+            android:onClick="gotoEfetuarDescarte"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
-
 
 
     </LinearLayout>

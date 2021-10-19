@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".coleta_endereco">
 
     <LinearLayout
@@ -39,61 +40,75 @@
             android:ems="10"
             android:inputType="textPostalAddress"
             android:minHeight="48dp"
-            android:text="CEP" />
+            android:textColor="#000000"
+            android:textColorHint="#626262"
+            android:hint="CEP" />
 
         <EditText
             android:id="@+id/txtEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Endereço" />
+            android:hint="Endereço" />
 
         <EditText
             android:id="@+id/txtNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="number"
             android:minHeight="48dp"
-            android:text="Numero da residência" />
+            android:hint="Numero da residência" />
 
         <EditText
             android:id="@+id/txtComplemento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Complemento" />
+            android:hint="Complemento" />
 
         <EditText
             android:id="@+id/txtBairro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Bairro" />
+            android:hint="Bairro" />
 
         <EditText
             android:id="@+id/txtCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Cidade" />
+            android:hint="Cidade" />
 
         <EditText
             android:id="@+id/txtEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="#000000"
+            android:textColorHint="#626262"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Estado" />
+            android:hint="Estado" />
 
         <Space
             android:layout_width="match_parent"
@@ -103,6 +118,7 @@
             android:id="@+id/btnAvancar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="gotoTiposLixo"
             android:text="Avançar" />
 
     </LinearLayout>

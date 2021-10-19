@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".resgate_pontos_confirmacao">
 
     <LinearLayout
@@ -19,7 +20,7 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewSeuSaque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Seu saque no valor de"
@@ -28,7 +29,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewValorSaque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="R$12,00"
@@ -37,7 +38,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewSucesso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Foi solicitado com sucesso!"
@@ -50,10 +51,10 @@
             android:layout_height="120dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPrazo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Você verá o valor em sua \n conte em até 2 dias úteis"
+            android:text="Você verá o valor em sua \n conta em até 2 dias úteis"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -67,6 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="153dp"
             android:layout_weight="1"
+            android:onClick="gotoMenu"
             android:text="Menu Inicial" />
 
         <Space
