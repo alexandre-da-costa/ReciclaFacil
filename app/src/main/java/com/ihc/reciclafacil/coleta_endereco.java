@@ -12,11 +12,18 @@ public class coleta_endereco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coleta_endereco);
+        getSupportActionBar().setTitle("Solicitar Coleta");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void gotoTiposLixo(View view)
     {
         Intent i = new Intent(this, coleta_tipo.class);
         startActivity(i);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

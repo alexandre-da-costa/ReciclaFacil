@@ -12,6 +12,7 @@ public class menu_principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+        getSupportActionBar().setTitle("ReciclaFacil");
     }
 
     public void gotoResgate(View view)

@@ -12,11 +12,18 @@ public class coleta_agendamento extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coleta_agendamento);
+        getSupportActionBar().setTitle("Solicitar Coleta");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void gotoRevisar(View view)
     {
         Intent i = new Intent(this, coleta_revisao.class);
         startActivity(i);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

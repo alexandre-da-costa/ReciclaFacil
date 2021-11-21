@@ -1,119 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:background="#FFFFFF"
     tools:context=".coleta_revisao">
 
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="117dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/entrega_4" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/entrega_4" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginBottom="20dp"
+        android:text="Revise os dados da coleta"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Revise os dados da coleta"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="34sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:text="Endereço"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Endereço"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/lblEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginBottom="20dp"
+        android:text="Rua Villa Lobos, 382, Casa\nBarnabé, Gravataí - RS\nCEP 94150-460"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/lblEndereco"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:text="Rua abcdefg, 123, Porto Alegre - RS"
-            android:textAlignment="center"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblEndereco"
+        android:text="Data"
+        android:textAlignment="center"
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Data"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblData"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:text="20/10/2021"
-            android:textAlignment="center"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lblData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginBottom="20dp"
+        android:text="26/11/2021"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Turno"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/lblData"
+        android:text="Turno"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblTurno"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:text="Tarde"
-            android:textAlignment="center"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/lblTurno"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_below="@id/textView5"
+        android:text="Manhã"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="gotoConfirm"
+        android:text="Confirmar" />
 
-            <Button
-                android:id="@+id/btnConfirmar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="gotoConfirm"
-                android:text="Confirmar" />
 
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="gotoMenu"
+        android:text="Cancelar" />
 
-            <Button
-                android:id="@+id/btnCancelar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="gotoMenu"
-                android:text="Cancelar" />
-        </LinearLayout>
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

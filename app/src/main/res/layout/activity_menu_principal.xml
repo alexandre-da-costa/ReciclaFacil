@@ -1,101 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
     android:background="#FFFFFF"
     tools:context=".menu_principal">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textViewPontos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="wrap_content"
+        android:text="1200"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textViewPontos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1200"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="40sp" />
-
-        <TextView
-            android:id="@+id/textViewAccPontos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pontos Acumulados"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:text="Resgatar"
-            android:onClick="gotoResgate"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_weight="1"
-            android:text="Pontos de Coleta"
-            android:onClick="gotoPontosColeta"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_weight="1"
-            android:text="Coleta a Domicílio"
-            android:onClick="gotoColetaDomicilio"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_weight="1"
-            android:text="Histórico de Descartes"
-            android:onClick="gotoHistorico"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_weight="1"
-            android:text="Efetuar Descarte"
-            android:onClick="gotoEfetuarDescarte"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/textViewAccPontos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPontos"
+        android:text="Pontos Acumulados"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnResgate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAccPontos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="1"
+        android:onClick="gotoResgate"
+        android:text="Resgatar" />
+
+    <TextView
+        android:id="@+id/textViewDeseja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnResgate"
+        android:text="O que deseja fazer agora?"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/viewMapIcon"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/textViewDeseja"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/mapicon"></ImageView>
+
+    <Button
+
+        android:id="@+id/btnPontos"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/textViewDeseja"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/viewMapIcon"
+        android:layout_weight="1"
+        android:onClick="gotoPontosColeta"
+
+        android:text="Buscar Pontos de Coleta"></Button>
+
+    <ImageView
+        android:id="@+id/viewHomeIcon"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/viewMapIcon"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/houseicon"></ImageView>
+
+    <Button
+        android:id="@+id/btnColeta"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/btnPontos"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/viewHomeIcon"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:onClick="gotoColetaDomicilio"
+        android:text="Solicitar Coleta a Domicílio" />
+
+    <ImageView
+        android:id="@+id/viewHistIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/viewHomeIcon"
+        app:srcCompat="@drawable/listicon"></ImageView>
+
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/btnColeta"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/viewHistIcon"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:onClick="gotoHistorico"
+        android:text="Ver Histórico de Descartes" />
+
+    <ImageView
+        android:id="@+id/viewDiscIcon"
+        android:layout_width="62dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/viewHistIcon"
+        app:srcCompat="@drawable/trashicon"></ImageView>
+
+    <Button
+        android:id="@+id/btnDescarte"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/btnHistorico"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        android:onClick="gotoEfetuarDescarte"
+
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/viewDiscIcon"
+        android:text="Efetuar Descarte (qr code)" />
+
+
+</RelativeLayout>

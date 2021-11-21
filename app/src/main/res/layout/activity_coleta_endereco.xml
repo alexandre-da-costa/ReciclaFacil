@@ -1,125 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
     android:background="#FFFFFF"
     tools:context=".coleta_endereco">
 
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="117dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/entrega_1" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="117dp"
-            app:srcCompat="@drawable/entrega_1" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginBottom="20dp"
+        android:text="Digite seu CEP para preencher seu endereço automaticamente"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Digite seu CEP para preencher seu endereço automaticamente"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="34sp" />
+    <EditText
+        android:id="@+id/txtCEP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:ems="10"
+        android:hint="CEP"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+    <EditText
+        android:id="@+id/txtEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCEP"
+        android:ems="10"
+        android:hint="Endereço"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtCEP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPostalAddress"
-            android:minHeight="48dp"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:hint="CEP" />
+    <EditText
+        android:id="@+id/txtNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEndereco"
+        android:ems="10"
+        android:hint="Numero da residência"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtEndereco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Endereço" />
+    <EditText
+        android:id="@+id/txtComplemento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNumero"
+        android:ems="10"
+        android:hint="Complemento"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtNumero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:hint="Numero da residência" />
+    <EditText
+        android:id="@+id/txtBairro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtComplemento"
+        android:ems="10"
+        android:hint="Bairro"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtComplemento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Complemento" />
+    <EditText
+        android:id="@+id/txtCidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBairro"
+        android:ems="10"
+        android:hint="Cidade"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtBairro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Bairro" />
+    <EditText
+        android:id="@+id/txtEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCidade"
+        android:ems="10"
+        android:hint="Estado"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#626262" />
 
-        <EditText
-            android:id="@+id/txtCidade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Cidade" />
 
-        <EditText
-            android:id="@+id/txtEstado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="#000000"
-            android:textColorHint="#626262"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Estado" />
+    <Button
+        android:id="@+id/btnAvancar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="gotoTiposLixo"
+        android:text="Avançar" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
-
-        <Button
-            android:id="@+id/btnAvancar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="gotoTiposLixo"
-            android:text="Avançar" />
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
