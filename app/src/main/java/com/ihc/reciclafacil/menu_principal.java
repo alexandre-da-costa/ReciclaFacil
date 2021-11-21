@@ -23,7 +23,7 @@ public class menu_principal extends AppCompatActivity {
 
     public void gotoPontosColeta(View view)
     {
-        Intent i = new Intent(this, pontos_coleta.class);
+        Intent i = new Intent(this, MapaColeta.class);
         startActivity(i);
     }
 
